@@ -21,8 +21,6 @@ The plugin exposes a WebSocket endpoint on your server. The dashboard connects t
 bun add elysia-vision
 ```
 
-**Important:** Versions 0.1.0, 0.1.2, and 0.1.3 are broken. Please use the latest version. (Sorry, first-time package publisher here! 😅)
-
 ## Usage
 
 ### 1. Add the plugin to your Elysia server
