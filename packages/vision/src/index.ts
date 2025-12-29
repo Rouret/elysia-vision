@@ -6,16 +6,19 @@ import {
 } from "./constants";
 import type {
   _INTERNAL_VisionWebSocketPayload,
+  ElysiaVisionConfig,
   VisionCall,
   VisionRequest,
   VisionResponse,
 } from "./types";
 import { sanitizeHeaders } from "./utils";
 
-const vision = () => {
+const vision = (config: ElysiaVisionConfig = {}) => {
   //TODO: tree shake this
-  if (process.env.NODE_ENV === "production") {
-    return null;
+  if (process.env.NODE_ENV === "production" || !config.enabled) {
+    return new Elysia({
+      name: "elysia-vision",
+    });
   }
 
   const clients = new Set<any>();
