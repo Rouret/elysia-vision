@@ -1,21 +1,17 @@
 P1:
 
-- Disable plugin when in production (with tree shaking)
-- Fix publish
-- Allias
 - Redo design
 - Add test
-- Add address input + cache
 
-P2:
+- P2:
 
 - Image in NPM
 - Remove react toast use daisy instead
+- Generate WS types for webapp
 
 Ideas:
 
 - Doc
-- Plugin Config
 
 Roadmap:
 
