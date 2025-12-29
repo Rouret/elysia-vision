@@ -23,3 +23,11 @@ export type VisionCall = {
   request: VisionRequest;
   response: VisionResponse | null;
 };
+
+export type ElysiaVisionConfig = {
+  /**
+   * @default true
+   * false in production
+   */
+  enabled?: boolean;
+};
