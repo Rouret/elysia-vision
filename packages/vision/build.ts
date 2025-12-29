@@ -33,6 +33,9 @@ await Promise.all([
   }),
 ]);
 
-await Promise.all([$`cp dist/cjs/*.d.ts dist`]);
+await Promise.all([
+  $`cp dist/cjs/*.d.ts dist`,
+  $`cp ../../README.md dist/README.md`,
+]);
 
 process.exit();

@@ -35,8 +35,7 @@
     "build": "bun build.ts"
   },
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
