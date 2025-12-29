@@ -1,0 +1,20 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "packages/webapp" },
+    { "path": "packages/vision" }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [{ "pattern": "packages/*/" }],
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }
+}
