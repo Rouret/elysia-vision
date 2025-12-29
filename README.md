@@ -34,6 +34,12 @@ import vision from "elysia-vision";
 const app = new Elysia().use(vision()).listen(3000);
 ```
 
+Configure:
+
+| Option  | Description                  | Default | Comments            |
+| ------- | ---------------------------- | ------- | ------------------- |
+| enabled | Whether to enable the plugin | true    | false in production |
+
 ### 2. Open the web dashboard
 
 Go to **https://elysia-vision-webapp.vercel.app**
