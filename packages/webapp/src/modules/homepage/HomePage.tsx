@@ -1,5 +1,5 @@
 import { ApiAddressForm } from "#/modules/homepage/components/ApiAddressForm";
-import { VERSION } from "#/shared/constants";
+import { GITHUB_URL, VERSION } from "#/shared/constants";
 import { GraduationCap, Info, Star } from "lucide-react";
 import toast from "react-hot-toast";
 
@@ -13,17 +13,17 @@ const links: Link[] = [
   {
     icon: <GraduationCap color="white" size={16} />,
     label: "Documentation",
-    href: null,
+    href: GITHUB_URL,
   },
   {
     icon: <Info color="white" size={16} />,
     label: "How to use",
-    href: null,
+    href: GITHUB_URL,
   },
   {
     icon: <Star color="white" size={16} />,
     label: "Star the project",
-    href: null,
+    href: GITHUB_URL,
   },
 ];
 
@@ -35,27 +35,26 @@ export const HomePage = () => {
         <div className="badge badge-neutral">v{VERSION}</div>
       </div>
       <div className="flex items-start justify-start gap-8">
-        <div className="flex flex-col items-center justify-center gap-4 ">
-          <ul className="menu bg-base-200 rounded-box w-56">
-            {links.map((link) => (
-              <li>
-                <a
-                  href={link.href ?? undefined}
-                  onClick={() => {
-                    if (link.href) return;
-                    toast.error("This link is not available yet");
-                  }}
-                >
-                  {link.icon}
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <ApiAddressForm />
+        <ul className="menu bg-base-200 rounded-box w-56">
+          {links.map((link) => (
+            <li>
+              <a
+                href={link.href ?? undefined}
+                onClick={() => {
+                  if (link.href) return;
+                  toast.error("This link is not available yet");
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.icon}
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
+      <ApiAddressForm />
     </div>
   );
 };
