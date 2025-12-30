@@ -1,5 +1,6 @@
 import { navigationConfig } from "#/modules/core/navigation.config";
 import { WebsocketStatus } from "#/modules/core/WebsocketStatus";
+import { GITHUB_URL } from "#/shared/constants";
 
 export const Header = () => {
   return (
@@ -7,7 +8,7 @@ export const Header = () => {
       <div className="navbar-start">
         <a
           className="btn btn-ghost text-xl"
-          href="https://github.com/Rouret/elysia-vision"
+          href={GITHUB_URL}
           target="_blank"
           rel="noopener noreferrer"
         >
