@@ -1,8 +1,14 @@
-# elysia-vision
+<h1 align='center'>
+  Elysia Vision <img alt="NPM Version" src="https://img.shields.io/npm/v/elysia-vision">
+</h1>
+<img alt="Elysia vision webapp" src="image.png">
+<h3 align='center'>
+  <b>CURRENTLY IN PROGRESS.</b>
+</h3>
 
-Plugin for [Elysia](https://github.com/elysiajs/elysia) to monitor your API requests in real-time through a web dashboard.
-
-**CURRENTLY IN PROGRESS.**
+<p align='center'>
+Plugin for <a href='https://github.com/elysiajs/elysia'>Elysia.js</a> to monitor your API requests in real-time through a web dashboard and more.
+</p>
 
 ## How it works
 
@@ -17,11 +23,11 @@ The plugin exposes a WebSocket endpoint on your server. The dashboard connects t
 
 ## Installation
 
+### 0. Install the plugin
+
 ```bash
 bun add elysia-vision
 ```
-
-## Usage
 
 ### 1. Add the plugin to your Elysia server
 
