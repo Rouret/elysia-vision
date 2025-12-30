@@ -1,6 +1,6 @@
 {
   "name": "elysia-vision",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Plugin for Elysia that monitors your API requests in real-time through a web dashboard.",
   "exports": {
     "./package.json": "./package.json",
