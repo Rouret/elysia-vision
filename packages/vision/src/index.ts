@@ -1,9 +1,5 @@
 import { Elysia } from "elysia";
-import {
-  VISION_CALL_EVENT_NAME,
-  VISION_PATHS,
-  VISION_REQUEST_ID_HEADER,
-} from "./constants";
+import { VISION_CALL_EVENT_NAME, VISION_REQUEST_ID_HEADER } from "./constants";
 import type {
   _INTERNAL_VisionWebSocketPayload,
   ElysiaVisionConfig,
@@ -45,10 +41,6 @@ const vision = (config: ElysiaVisionConfig = {}) => {
 
       const url = new URL(clonedRequest.url);
 
-      // Ignore /vision/* from webapp
-      if (VISION_PATHS.some((path) => url.pathname.startsWith(path))) {
-        return;
-      }
       const visionRequestId = Bun.randomUUIDv7();
 
       set.headers[VISION_REQUEST_ID_HEADER] = visionRequestId;
