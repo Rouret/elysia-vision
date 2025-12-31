@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "test": "bun test",
+    "test": "bun test --watch",
     "dev": "bun --hot testing/local.ts",
     "release": "bun --hot testing/release.ts",
     "fakeClient": "bun scripts/fakeClient.ts",
