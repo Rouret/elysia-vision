@@ -60,7 +60,7 @@ const vision = (config: ElysiaVisionConfig = {}) => {
         body: clonedRequest.body
           ? JSON.stringify(await clonedRequest.body.json())
           : null,
-        headers: sanitizeHeaders(set.headers),
+        headers: request.headers.toJSON(),
       };
 
       const visionCall: VisionCall = {
